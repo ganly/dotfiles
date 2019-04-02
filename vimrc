@@ -35,8 +35,6 @@ if isdirectory(pathogen_dir)
   " We could regenerate helptags each time we start vim - I chose not to do this
   " (usually)
   call pathogen#helptags()
-else
-  echo "pathogen not installed"
 endif
 
 
