@@ -1,4 +1,8 @@
-" These commands came from the FAQ file of the vim-ruby gem
+" vim: nowrap foldmethod=marker
+" The above command turns on folding for vim files.
+" See
+
+" Many of these commands came from the FAQ file of the vim-ruby gem
 " /usr/lib/ruby/gems/1.8/gems/vim-ruby-2007.05.07/FAQ
 "
 " See also
