@@ -4,6 +4,7 @@
 " zo - opens a fold
 " gz - closes a fold
 
+
 " Notes {{{1
 
 " Many of these commands came from the FAQ file of the vim-ruby gem
@@ -27,11 +28,18 @@ runtime ftplugin/man.vim
 " Pathogen allows installation of vim bundles in their own directories,
 " which is a very good thing.
 " See http://www.vim.org/scripts/script.php?script_id=2332
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect() 
-" We could regenerate helptags each time we start vim - I chose not to do this
-" (usually)
-call pathogen#helptags()
+let pathogen_dir =  expand("$HOME/.vim/bundle/vim-pathogen")
+if isdirectory(pathogen_dir)
+  runtime bundle/vim-pathogen/autoload/pathogen.vim
+  call pathogen#infect() 
+  " We could regenerate helptags each time we start vim - I chose not to do this
+  " (usually)
+  call pathogen#helptags()
+else
+  echo "pathogen not installed"
+endif
+
+
 
 
 
