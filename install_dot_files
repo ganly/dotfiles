@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Install dotfiles as symlinks to files in git repo
+# Written in the most basic Bourne shell script for portability
+# and running on small containers, etc.
+
+echo "Hello from install prog"
+
+# We want symbolic links relative to the home directory
+# so work out the relative destination.
+DOTFILEBASE=`pwd | sed -e s?$HOME/??g`
+
+
+# We want to make symbolic links in the home directory,
+# so move there.
+cd $HOME
+
+# Handle case where target is an existing symbolic link
+if [ -L .vimrc ]; then
+  echo '$HOME/.vimrc exists and is a symbolic link, skipping...'
+  # FIXME: should check if it points where we think it should,
+  # and continue silently if so, or give a warning for a manual
+  # fix if not.
+  exit 0
+fi
+
+
+# Give warning if file already exists and is a regular file
+if [ -f .vimrc ]; then
+  echo '$HOME/.vimrc already exists, and is a regular file not'
+  echo 'a symbolic link. Not touching it - please handle it manually.'
+  exit 1
+fi
+
+if [ ! -e $HOME/.vimrc ]; then
+  echo '$HOME/.vimrc does not exist'
+  echo 'symbolically linking $HOME/.vimrc to' ${DOTFILEBASE}/vimrc
+  ln -s ${DOTFILEBASE}/vimrc .vimrc
+  exit 0
+fi
+
