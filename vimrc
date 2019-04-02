@@ -1,6 +1,10 @@
 " vim: nowrap foldmethod=marker
 " The above command turns on folding for vim files.
-" See
+" See https://vim.fandom.com/wiki/Folding for details;
+" zo - opens a fold
+" gz - closes a fold
+
+" Notes {{{1
 
 " Many of these commands came from the FAQ file of the vim-ruby gem
 " /usr/lib/ruby/gems/1.8/gems/vim-ruby-2007.05.07/FAQ
@@ -19,6 +23,7 @@ set nocompatible        " We're running Vim, not vi!
 runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
+" Pathogen stuff {{{1
 " Pathogen allows installation of vim bundles in their own directories,
 " which is a very good thing.
 " See http://www.vim.org/scripts/script.php?script_id=2332
@@ -30,6 +35,7 @@ call pathogen#helptags()
 
 
 
+" Syntax highlighting stuff {{{1
 
 syntax on               " Enable syntax highlighting
 "  the syntax on also enables filetype, so the next line is not necessary:
@@ -41,7 +47,9 @@ filetype plugin on      " Enable filetype-specific plugins
 "  see 
 "    :help filetype
 "  for more details.
-"
+
+
+" Ruby stuff {{{1
 " hmmm... this should be ruby specific...
 " need to check my ruby plugins, and put this in an augroup
 " if it's still necessary.
@@ -50,6 +58,7 @@ compiler ruby           " Enable compiler support for ruby
 " http://wiki.rubyonrails.org/rails/pages/HowtoUseVimWithRails
 
 
+" Highlighting {{{1
 " See
 "   :help highlight
 " for more details. I think I added these when I was using a black background
@@ -57,6 +66,7 @@ compiler ruby           " Enable compiler support for ruby
 highlight Comment ctermfg=lightgreen
 highlight Search  ctermfg=black ctermbg=yellow
 
+" Conways tips {{{1
 " These commands came from Damian Conway's Perl Best Practises book
 " page 482
 set autoindent                  " Preserve current indent on new lines
@@ -65,6 +75,7 @@ set backspace=indent,eol,start  " Make backspaces delete sensibly
 "  MacVim does this for gvim automatically, not sure about others or if we
 "  should keep it in.
 
+" Indentation {{{1
 " hmm, recommendation is 4 columns for Perl, 2 for Ruby.
 " Need to work out how to make these setting language specific.
 " Have worked out a hint - see :help augroup
@@ -74,8 +85,10 @@ set shiftwidth=2                " Indent/outdent by N columns
 set expandtab                   " Convert all tabs typed to spaces
 set shiftround                  " Indent/outdent to nearest tabstop
 
+" Matchpains {{{1
 "set matchpairs+=<:>             " Allow % to bounce between angles too
 
+" Abbreviations (for perl) {{{1
 " The iab command (also ia, iabbr and iabbrev) is an abbreviation in Insert mode.
 " see
 "   help iabbrev
@@ -92,7 +105,7 @@ iab pdbg    use Data::Dumper 'Dumper';^Mwarn Dumper [];^[hi
 " is surely wrong as I just typed the ASCII charaters.
 " The perl abbreviations should only be done in perl mode anyhow...
 
-" Abbreviations for rails development
+" Rails stuff {{{1
 " these should only be added when in rails mode too...
 "
 " This one is for entering model files - instead of typing :e app/models/
@@ -105,6 +118,7 @@ cab eav e app/views
 "    :help cabbrev
 
 
+" Mason stuff {{{1
 " These were autocommands I needed circa 2001 when I was doing work with mason
 " but I guess the mason.vim command didn't exist then. I've had them commented
 " out for years, but didn't delete them since I wanted to know how they
@@ -117,6 +131,7 @@ cab eav e app/views
 "au BufNewFile,BufRead *.mas set ft=mason
 "au BufNewFile,BufRead *.mpl set ft=mason
 
+" Searching {{{1
 set hlsearch
 " Searching for a term leaves all those terms highlighted.
 " This sets a function key to unhighlight
@@ -126,10 +141,15 @@ map <F8> :nohlsearch<CR>
 set incsearch
 
 
+" Markdown stuff {{{1
+
 " Markdown mode, from http://plasticboy.com/markdown-vim-mode/
 augroup mkd
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
 augroup END
+
+
+" Remappings {{{1
 
 " Can't remember what these are for...
 cnoremap <C-L> <Right>
@@ -137,6 +157,8 @@ cnoremap <C-H> <Left>
 cnoremap <C-J> <Down>
 cnoremap <C-K> <Up>
 
+
+" GPG stuff {{{1
 
 " Default recipient for creating gpg encrypted files
 let g:GPGDefaultRecipients=["steve@ganly.com"]
