@@ -9,7 +9,7 @@ VERBOSITY_LEVEL=0
 ##
 ## Define functions up front
 ##
-function verbose_echo() {
+verbose_echo() {
   if [ "$VERBOSITY_LEVEL" -gt 0 ]; then
     echo $*
   fi
