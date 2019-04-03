@@ -44,27 +44,77 @@ fi
 # so move there.
 cd $HOME
 
-# Handle case where target is an existing symbolic link
-if [ -L .vimrc ]; then
-  verbose_echo 1 '$HOME/.vimrc exists and is a symbolic link, skipping...'
-  # FIXME: should check if it points where we think it should,
-  # and continue silently if so, or give a warning for a manual
-  # fix if not.
-  exit 0
-fi
+check_and_handle_existing_symlink() {
+  # Handle case where target is an existing symbolic link
+  TARGET=$1
+  DOTFILE=".${TARGET}"
+  verbose_echo 4 "check_and_handle_existing_symlink()"
+  verbose_echo 5 TARGET is $TARGET and DOTFILE is $DOTFILE
+
+  if [ -L "$DOTFILE" ]; then
+
+    verbose_echo 1 "\$HOME/${DOTFILE} is existing symbolic link, skipping..."
+    # FIXME: should check if it points where we think it should,
+    # and continue silently if so, or give a warning for a manual
+    # fix if not.
+    return 0
+
+  fi
+
+  return 1
+}
 
 
-# Give warning if file already exists and is a regular file
-if [ -f .vimrc ]; then
-  echo '$HOME/.vimrc already exists, and is a regular file not'
-  echo 'a symbolic link. Not touching it - please handle it manually.'
-  exit 1
-fi
+check_and_handle_existing_regular_file() {
+  # Give warning if file already exists and is a regular file
+  TARGET=$1
+  DOTFILE=".${TARGET}"
+  verbose_echo 4 "check_and_handle_existing_regular_file()"
+  verbose_echo 5 TARGET is $TARGET and DOTFILE is $DOTFILE
 
-if [ ! -e $HOME/.vimrc ]; then
-  echo '$HOME/.vimrc does not exist'
-  echo 'symbolically linking $HOME/.vimrc to' ${DOTFILESRCDIR}/vimrc
-  ln -s ${DOTFILESRCDIR}/vimrc .vimrc
-  exit 0
-fi
+  if [ -f "${DOTFILE}" ]; then
+    echo "\$HOME/$DOTFILE already exists, and is a regular file not"
+    echo 'a symbolic link. Not touching it - please handle it manually.'
+    return 0
+  fi
+
+  return 1
+}
+
+
+create_new_symlink() {
+  TARGET=$1
+  DOTFILE=".${TARGET}"
+  verbose_echo 4 "create_new_symlink()"
+  verbose_echo 5 TARGET is $TARGET and DOTFILE is $DOTFILE
+
+  if [ ! -e "$HOME/$TARGET" ]; then
+    verbose_echo 1 "\$HOME/$DOTFILE does not exist"
+    verbose_echo 1 \
+      "symbolically linking \$HOME/$DOTFILE to ${DOTFILESRCDIR}/$TARGET"
+
+    ln -s "${DOTFILESRCDIR}/$TARGET" "$DOTFILE"
+    return 0
+  fi
+
+  return 1
+}
+
+
+handle_file() {
+  FILENAME=$1
+
+  check_and_handle_existing_symlink "$FILENAME"      || \
+  check_and_handle_existing_regular_file "$FILENAME" || \
+  create_new_symlink "$FILENAME"                     || \
+    echo "No target seems to have worked"
+}
+
+
+
+
+handle_file "vimrc"
+handle_file "aliases"
+
+exit 0
 
