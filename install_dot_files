@@ -4,11 +4,20 @@
 # Written in the most basic Bourne shell script for portability
 # and running on small containers, etc.
 
-echo "Hello from install prog"
 
 # We want symbolic links relative to the home directory
 # so work out the relative destination.
-DOTFILEBASE=`pwd | sed -e s?$HOME/??g`
+DOTFILESRCDIR=`pwd | sed -e s?$HOME/??g`
+echo "DOTFILESRCDIR is $DOTFILESRCDIR"
+
+# We expect to be run from the source directory,
+# do a quick sanity check that this is so.
+THIS_SCRIPT_NAME=`basename $0`
+THIS_SCRIPT_FILE="$HOME/$DOTFILESRCDIR/$THIS_SCRIPT_NAME" 
+if [ ! -f "$THIS_SCRIPT_FILE" ]; then
+  echo "$THIS_SCRIPT_NAME needs to be run from the dotfiles source dir"
+  exit 1
+fi
 
 
 # We want to make symbolic links in the home directory,
@@ -34,8 +43,8 @@ fi
 
 if [ ! -e $HOME/.vimrc ]; then
   echo '$HOME/.vimrc does not exist'
-  echo 'symbolically linking $HOME/.vimrc to' ${DOTFILEBASE}/vimrc
-  ln -s ${DOTFILEBASE}/vimrc .vimrc
+  echo 'symbolically linking $HOME/.vimrc to' ${DOTFILESRCDIR}/vimrc
+  ln -s ${DOTFILESRCDIR}/vimrc .vimrc
   exit 0
 fi
 
