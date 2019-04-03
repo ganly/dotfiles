@@ -4,11 +4,21 @@
 # Written in the most basic Bourne shell script for portability
 # and running on small containers, etc.
 
+VERBOSITY_LEVEL=0
+
+##
+## Define functions up front
+##
+function verbose_echo() {
+  if [ "$VERBOSITY_LEVEL" -gt 0 ]; then
+    echo $*
+  fi
+}
 
 # We want symbolic links relative to the home directory
 # so work out the relative destination.
 DOTFILESRCDIR=`pwd | sed -e s?$HOME/??g`
-echo "DOTFILESRCDIR is $DOTFILESRCDIR"
+verbose_echo "DOTFILESRCDIR is $DOTFILESRCDIR"
 
 # We expect to be run from the source directory,
 # do a quick sanity check that this is so.
