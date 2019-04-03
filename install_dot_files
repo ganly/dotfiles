@@ -6,9 +6,12 @@
 
 VERBOSITY_LEVEL=1
 
+# Usage:
+#   install_dot_files [-v N]
+
 case "$1" in
   -v) VERBOSITY_LEVEL=$2
-      shift ;;
+      shift; shift ;;
 esac
 
 
@@ -17,7 +20,6 @@ esac
 ##
 verbose_echo() {
   VERBOSITY_OF_MESSAGE=$1; shift
-  echo VERBOSITY_OF_MESSAGE = $VERBOSITY_OF_MESSAGE 
   if [ "$VERBOSITY_LEVEL" -ge "$VERBOSITY_OF_MESSAGE " ]; then
     echo $*
   fi
@@ -44,7 +46,7 @@ cd $HOME
 
 # Handle case where target is an existing symbolic link
 if [ -L .vimrc ]; then
-  echo '$HOME/.vimrc exists and is a symbolic link, skipping...'
+  verbose_echo 1 '$HOME/.vimrc exists and is a symbolic link, skipping...'
   # FIXME: should check if it points where we think it should,
   # and continue silently if so, or give a warning for a manual
   # fix if not.
