@@ -6,6 +6,12 @@
 
 VERBOSITY_LEVEL=1
 
+case "$1" in
+  -v) VERBOSITY_LEVEL=$2
+      shift ;;
+esac
+
+
 ##
 ## Define functions up front
 ##
