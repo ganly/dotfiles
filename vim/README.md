@@ -9,6 +9,9 @@ But here's a list of what has been installed:
 
 [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
+[vim-markdown](https://github.com/plasticboy/vim-markdown)
+
+
 
 Things to examine and set up later
 ----------------------------------
