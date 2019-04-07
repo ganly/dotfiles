@@ -115,6 +115,7 @@ handle_file() {
 
 handle_file "vimrc"
 handle_file "aliases"
+handle_file "vim"
 
 exit 0
 
