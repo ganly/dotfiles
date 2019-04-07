@@ -75,9 +75,10 @@ highlight Search  ctermfg=black ctermbg=yellow
 " Conways tips {{{1
 " These commands came from Damian Conway's Perl Best Practises book
 " page 482
-set autoindent                  " Preserve current indent on new lines
 set textwidth=78                " Wrap at this column
-set backspace=indent,eol,start  " Make backspaces delete sensibly
+"" These are now set in sensible.vim
+"""set autoindent                  " Preserve current indent on new lines
+"""set backspace=indent,eol,start  " Make backspaces delete sensibly
 "  MacVim does this for gvim automatically, not sure about others or if we
 "  should keep it in.
 
@@ -85,11 +86,12 @@ set backspace=indent,eol,start  " Make backspaces delete sensibly
 " hmm, recommendation is 4 columns for Perl, 2 for Ruby.
 " Need to work out how to make these setting language specific.
 " Have worked out a hint - see :help augroup
-set tabstop=2                   " Inentation levels every N columns
-set softtabstop=2
-set shiftwidth=2                " Indent/outdent by N columns
-set expandtab                   " Convert all tabs typed to spaces
-set shiftround                  " Indent/outdent to nearest tabstop
+""note: am taking these out as they should be language specific
+""note:set tabstop=2                   " Inentation levels every N columns
+""note:set softtabstop=2
+""note:set shiftwidth=2                " Indent/outdent by N columns
+""note:set expandtab                   " Convert all tabs typed to spaces
+""note:set shiftround                  " Indent/outdent to nearest tabstop
 
 " Matchpains {{{1
 "set matchpairs+=<:>             " Allow % to bounce between angles too
@@ -142,9 +144,6 @@ set hlsearch
 " Searching for a term leaves all those terms highlighted.
 " This sets a function key to unhighlight
 map <F8> :nohlsearch<CR>
-
-" Turn on incremental search
-set incsearch
 
 
 " Markdown stuff {{{1
