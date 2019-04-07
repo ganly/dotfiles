@@ -18,6 +18,25 @@ Things to examine and set up later
 
 https://github.com/tpope/vim-fugitive
 
+These were the bundles I previously had installed:
+```
+$ ls -1 ~/.vim-local/bundle
+vim-bundler
+vim-coffee-script
+vim-cucumber
+vim-fugitive
+vim-haml
+vim-markdown
+vim-pathogen
+vim-rails
+vim-rake
+vim-scriptease
+vim-sensible
+vim-surround
+vim-vividchalk
+```
+
+
 
 Not sure yet
 ------------
