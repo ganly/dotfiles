@@ -3,6 +3,7 @@
 " See https://vim.fandom.com/wiki/Folding for details;
 " zo - opens a fold
 " gz - closes a fold
+" zR - open all the folds
 
 
 " Notes {{{1
