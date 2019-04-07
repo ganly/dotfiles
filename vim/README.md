@@ -36,6 +36,16 @@ vim-surround
 vim-vividchalk
 ```
 
+https://github.com/vim-pandoc/vim-pandoc
+
+https://github.com/shime/vim-livedown
+
+https://github.com/godlygeek/tabular
+
+https://github.com/junegunn/limelight.vim
+
+https://vim.works/2019/03/16/using-markdown-in-vim/
+
 
 
 Not sure yet
