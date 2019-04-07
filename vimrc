@@ -42,13 +42,14 @@ endif
 
 " Syntax highlighting stuff {{{1
 
-syntax on               " Enable syntax highlighting
+" Syntax and filetype directives now come from sensible.vim
+"syntax on               " Enable syntax highlighting
 "  the syntax on also enables filetype, so the next line is not necessary:
 "filetype on             " Enables filetype detection
 "  this loads $VIMRUNTIME/filetype.vim which defines autocommands
 "  for the BufNewFile and BufRead events.
-filetype indent on      " Enable filetype-specific indenting
-filetype plugin on      " Enable filetype-specific plugins
+"filetype indent on      " Enable filetype-specific indenting
+"filetype plugin on      " Enable filetype-specific plugins
 "  see 
 "    :help filetype
 "  for more details.
