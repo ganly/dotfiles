@@ -9,3 +9,19 @@ But here's a list of what has been installed:
 
 [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
+
+Things to examine and set up later
+----------------------------------
+
+https://github.com/tpope/vim-fugitive
+
+
+Not sure yet
+------------
+
+https://github.com/tpope/vim-scriptease
+
+Not sure if I need it.
+
+https://github.com/tpope/vim-surround
+
