@@ -26,16 +26,14 @@ runtime macros/matchit.vim
 runtime ftplugin/man.vim
 
 " Pathogen stuff {{{1
-" Pathogen allows installation of vim bundles in their own directories,
-" which is a very good thing.
-" See http://www.vim.org/scripts/script.php?script_id=2332
-let pathogen_dir =  expand("$HOME/.vim/bundle/vim-pathogen")
-if isdirectory(pathogen_dir)
-  runtime bundle/vim-pathogen/autoload/pathogen.vim
+" Pathogen allows installation of vim bundles in their own directories.
+" See https://github.com/tpope/vim-pathogen
+let pathogen_file =  expand("$HOME/.vim/autoload/pathogen.vim")
+if filereadable(pathogen_file)
   call pathogen#infect() 
   " We could regenerate helptags each time we start vim - I chose not to do this
   " (usually)
-  call pathogen#helptags()
+  "call pathogen#helptags()
 endif
 
 
