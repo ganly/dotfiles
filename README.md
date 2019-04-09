@@ -14,3 +14,12 @@ git clone https://github.com/ganly/dotfiles
 cd dotfiles
 make install
 ```
+
+
+Inspiration
+-----------
+
+Interesting looking repos
+* [nelstrom dotfiles](https://github.com/nelstrom/dotfiles)
+* [nicknisi dotfiles](https://github.com/nicknisi/dotfiles)
+
