@@ -47,6 +47,12 @@ https://github.com/junegunn/limelight.vim
 https://vim.works/2019/03/16/using-markdown-in-vim/
 
 
+* vundle - plugin manager
+* nerdtree - file drawer
+* ctrlp - fuzzy file finder
+* syntastic - syntax checker/linter
+
+
 
 Not sure yet
 ------------
