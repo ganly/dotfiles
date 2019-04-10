@@ -168,3 +168,8 @@ cnoremap <C-K> <Up>
 " Default recipient for creating gpg encrypted files
 let g:GPGDefaultRecipients=["steve@ganly.com"]
 
+
+" Turn off ex mode {{{1
+" See usr_05.txt
+map Q gq
+
