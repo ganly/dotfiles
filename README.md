@@ -22,4 +22,5 @@ Inspiration
 Interesting looking repos
 * [nelstrom dotfiles](https://github.com/nelstrom/dotfiles)
 * [nicknisi dotfiles](https://github.com/nicknisi/dotfiles)
+* [tony x's dotfiles ](https://github.com/tony/.dot-config)
 
