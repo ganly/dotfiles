@@ -116,6 +116,7 @@ handle_file() {
 handle_file "vimrc"
 handle_file "aliases"
 handle_file "vim"
+handle_file "tmux.conf"
 
 exit 0
 
