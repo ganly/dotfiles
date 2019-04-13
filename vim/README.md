@@ -46,6 +46,7 @@ https://github.com/junegunn/limelight.vim
 
 https://vim.works/2019/03/16/using-markdown-in-vim/
 
+https://github.com/francoiscabrol/ranger.vim
 
 * vundle - plugin manager
 * nerdtree - file drawer
