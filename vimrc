@@ -162,6 +162,12 @@ cnoremap <C-H> <Left>
 cnoremap <C-J> <Down>
 cnoremap <C-K> <Up>
 
+" Some experiments for my KAX-data project
+let mapleader = ","
+map <Leader>s :!git status<CR>
+map <Leader>a :!git add .<CR>
+map <Leader>c :!git commit -am "..."<CR>
+map <Leader>p :!gpp<CR>
 
 " GPG stuff {{{1
 
