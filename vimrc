@@ -167,7 +167,7 @@ let mapleader = ","
 map <Leader>s :!git status<CR>
 map <Leader>a :!git add .<CR>
 map <Leader>c :!git commit -am "..."<CR>
-map <Leader>p :!gpp<CR>
+map <Leader>p :!git pull && git push<CR>
 
 " GPG stuff {{{1
 
