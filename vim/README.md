@@ -48,6 +48,8 @@ https://vim.works/2019/03/16/using-markdown-in-vim/
 
 https://github.com/francoiscabrol/ranger.vim
 
+https://github.com/ctrlpvim/ctrlp.vim
+
 * vundle - plugin manager
 * nerdtree - file drawer
 * ctrlp - fuzzy file finder
