@@ -164,10 +164,10 @@ cnoremap <C-K> <Up>
 
 " Some experiments for my KAX-data project
 let mapleader = ","
-map <Leader>s :!git status<CR>
-map <Leader>a :!git add .<CR>
-map <Leader>c :!git commit -am "..."<CR>
-map <Leader>p :!git pull && git push<CR>
+map <Leader>s :!clear && echo "git status\n" && git status<CR>
+map <Leader>a :!clear && echo "git add .\n" && git add .<CR>
+map <Leader>c :!clear && echo "git commit -am ...\n" && git commit -am "..."<CR>
+map <Leader>p :!clear && echo "git pull && git push\n" && git pull && git push<CR>
 
 " GPG stuff {{{1
 
