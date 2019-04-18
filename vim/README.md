@@ -11,6 +11,8 @@ But here's a list of what has been installed:
 
 [vim-markdown](https://github.com/plasticboy/vim-markdown)
 
+[vue.vim](https://github.com/posva/vim-vue.git)
+
 
 
 Things to examine and set up later
