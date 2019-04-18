@@ -16,6 +16,11 @@ But here's a list of what has been installed:
 Things to examine and set up later
 ----------------------------------
 
+This seems to be the package manager of choice:
+https://github.com/VundleVim/Vundle.vim
+
+
+
 https://github.com/tpope/vim-fugitive
 
 These were the bundles I previously had installed:
