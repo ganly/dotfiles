@@ -1,3 +1,4 @@
 # Aliases
 
 alias gs="git status"
+alias pg="most"
