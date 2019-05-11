@@ -24,3 +24,11 @@ Interesting looking repos
 * [nicknisi dotfiles](https://github.com/nicknisi/dotfiles)
 * [tony x's dotfiles ](https://github.com/tony/.dot-config)
 
+To read
+-------
+
+https://wiki.archlinux.org/index.php/XDG_Base_Directory#Specification
+
+https://wiki.archlinux.org/index.php/XDG_Base_Directory
+
+
