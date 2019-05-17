@@ -32,3 +32,13 @@ https://wiki.archlinux.org/index.php/XDG_Base_Directory#Specification
 https://wiki.archlinux.org/index.php/XDG_Base_Directory
 
 
+Vim tips
+--------
+
+If visual mode is getting in the way of copy/paste:
+```
+:set mouse-=a
+```
+
+See https://gist.github.com/u0d7i/01f78999feff1e2a8361
+
