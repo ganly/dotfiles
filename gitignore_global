@@ -1,0 +1,7 @@
+# vim and gvim tempfiles
+.*.swp
+.*.un~
+.netrwhist
+
+# MacOS caches
+.DS_Store

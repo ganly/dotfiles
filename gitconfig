@@ -1,0 +1,19 @@
+[user]
+    name = Steve Ganly
+    email = steve.ganly@gmail.com
+
+[core]
+    excludesfile = ~/.gitignore_global
+
+[color]
+    status = auto
+    branch = auto
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+

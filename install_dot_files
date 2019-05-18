@@ -117,6 +117,8 @@ handle_file "vimrc"
 handle_file "aliases"
 handle_file "vim"
 handle_file "tmux.conf"
+handle_file "gitconfig"
+handle_file "gitignore_global"
 
 exit 0
 
