@@ -73,3 +73,14 @@ Not sure if I need it.
 
 https://github.com/tpope/vim-surround
 
+
+
+More notes and thoughts
+-----------------------
+
+https://vi.stackexchange.com/questions/177/what-is-the-purpose-of-swap-files
+
+https://stackoverflow.com/questions/743150/how-to-prevent-vim-from-creating-and-leaving-temporary-files
+
+https://stackoverflow.com/questions/607435/why-does-vim-save-files-with-a-extension
+
