@@ -42,3 +42,9 @@ If visual mode is getting in the way of copy/paste:
 
 See https://gist.github.com/u0d7i/01f78999feff1e2a8361
 
+
+ssh-agent
+---------
+
+https://stackoverflow.com/questions/1595848/configuring-git-over-ssh-to-login-once
+
