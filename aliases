@@ -2,3 +2,5 @@
 
 alias gs="git status"
 alias pg="most"
+
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
