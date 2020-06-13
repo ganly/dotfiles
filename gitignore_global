@@ -1,7 +1,12 @@
 # vim and gvim tempfiles
 .*.swp
+.*.swo
 .*.un~
 .netrwhist
 
 # MacOS caches
 .DS_Store
+
+# Python compiled caches
+__pycache__/
+
