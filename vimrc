@@ -4,6 +4,14 @@
 " zo - opens a fold
 " gz - closes a fold
 " zR - open all the folds
+"
+" Folding was on by default for Markdown files, but I didn't like it.
+" I found that over 99% of the time I'd have to unfold the files to start
+" editing.
+" As described here:
+"   https://github.com/plasticboy/vim-markdown#disable-folding
+" we can override the vim-markdown setting like this:
+let g:vim_markdown_folding_disabled = 1
 
 
 " Notes {{{1
