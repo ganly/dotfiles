@@ -179,3 +179,15 @@ let g:GPGDefaultRecipients=["steve@ganly.com"]
 " See usr_05.txt
 map Q gq
 
+" These are lovely bright colours on a Mac/in gvim
+colorscheme murphy
+
+" Keep swap files in a single directory
+" This avoids issues with git and all the systems that use iNotify
+set directory=$HOME/var/vimswapfiles
+" Have a think about disabling swap files completely with
+" set noswapfile
+
+
+
+
